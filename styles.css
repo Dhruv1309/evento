@@ -1,0 +1,215 @@
+/* BASE STYLES */
+body{
+    font-family: 'Lato',sans-serif;
+    color: white;
+    background-image: url("https://images.unsplash.com/photo-1583795484071-3c453e3a7c71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=100");
+    
+    
+    /* centerizing the image */
+    /* Positioning the image in center can use positionx and y to customize the image form certain expects */
+    background-position: center;
+    /* make sure that the image cover the entire page */
+    background-size: cover;
+    /* To stop the image repeatation */
+    background-repeat: no-repeat;
+    /* To set an background image */
+    /* moving the image up */
+    
+    /* moving the image to right  */
+    
+    background-color: rgba(0, 0, 0, 0.5);
+    /* blending the background image and color in an darken way */
+    background-blend-mode: darken;
+    display: flex;
+    /* Arrange flex items Vertical */
+    flex-direction: column;
+    /* To stretch the body to the end of the viewport height */
+    height: 100vh;
+    /* this is hide the scroll bar */
+    overflow-y: hidden;
+    
+}
+
+@keyframes fade-in {
+    /* At the start of animation */
+    0% {
+        /* transparency should be zero */
+        opacity: 0;
+        /* To move the text from y axis*/
+        transform: translateX(-15px);
+    }
+    /* At the end of animation */
+    100% {
+        /* transparency should be 100% */
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* HEADER */
+.header {
+    /* To make every element inside head sit on the same line as head */
+    display: flex;
+    /* This will align the items centerly */
+    align-items: center;
+    /* This will put as mush space between flex items as possible */
+    justify-content: space-between;
+    /* defiining the total width for the header section */
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fade-in 0.5s;
+    
+}
+
+.logo {
+    font-size: 18px;
+    /* To make the font bolder */
+    font-weight: 700;
+}
+
+.links {
+    /* To undo the default style of the list */
+    list-style: none;
+    /* this will make links item sit on the same line */
+    display: flex;
+}
+
+.link-item {
+    /* adding some space form right of list items */
+    margin-right: 23px;
+}
+
+.link {
+    /* To undo the default style of the anchor tag */
+    text-decoration: none;
+    /* Setting the color to white with 0.75 opecity and make it a little transparent */
+    color: rgba(255,255,255,0.75);
+    /* To make the font bolder */
+    font-weight: 500;
+    font-size: 14px;
+    /* In case of color property changes take 0.4s to make changes  */
+    /* transition: color 0.4s; */
+    /* You can also write all to check all properties */
+    transition: all 0.4s;
+}
+
+
+.link:hover {
+    /* Setting the color to white with 1 opecity and make it a fully visible */
+    color: rgba(255,255,255,1)
+}
+
+
+/*   MAIN   */
+
+.main {
+    text-align: center;
+    margin-top: 7%;
+    /* Adding an 0.1s delay in animation */
+    /* backwards means taking the first step of animation before the delay */
+    animation: fade-in 0.5s 0.1s backwards;
+    
+    
+    
+}
+
+.heading {
+    font-size: 64px;
+    font-weight: 800;
+    margin-bottom: 25px;
+    max-width:550px;
+    margin-right: auto;
+    margin-left: auto;
+    /* For customizing the line height */
+    line-height: 0.9;;
+    
+}
+
+.text {
+    font-size: 24px;
+    max-width: 630px;
+    margin-right: auto;
+    margin-left: auto;
+    /* Setting the transperensy of the image */
+    opacity: 0.8;
+    line-height: 1.5;   
+
+}
+
+.text--bold {
+    font-weight:900;
+}
+.form {
+    margin-top: 30px;
+}
+.input {
+    width: 511px;
+    height: 64px;
+    border: none;
+    padding: 0;
+    /* To make the borders curve */
+    border-radius: 3px;
+    opacity: 0.8;
+    padding-left: 30px;
+    font-size: 17px;
+    /* in form no auto inherit have to define it */
+    font: inherit;
+    outline: none; /* find replacement */
+    transition: all 0.4s;
+}
+
+.input:focus{
+    opacity: 1;
+}
+/* styling the property of the element */
+.input::placeholder {
+    color: #000;
+}
+.btn {
+    border: none;
+    padding: 0;
+    background-color: #000;
+    height: 64px;
+    width: 133px;
+    color: inherit;
+    border-radius: 3px;
+    font: inherit;
+    margin-left: 1px;
+    text-transform: uppercase;
+    /* Add space between letters */
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.4s;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: #161616;
+}
+
+/* FOOTER */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 12px;
+    padding-bottom: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 10px;
+    opacity: 0.6;
+    animation: fade-in 0.5s 0.2s backwards;
+}
+
+.copyright {
+
+}
+
+.status {
+
+}
